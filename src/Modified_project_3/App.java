@@ -6,7 +6,7 @@ public class App {
     public static double timecac(int n){    
         Random rd = new Random(); // creating Random object
 	    int[][] weight_arr = new int[n][n];
-	    int k = 1; 
+	    int k = 2; 
 	    for (int i = 0; i < n; i++) {
 	    	for (int j = 0; j < n; j++) {
 	    		if(j==i) {
