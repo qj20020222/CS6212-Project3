@@ -34,26 +34,25 @@ public class Teleportation_1 {
 		}
 			
         for (int c = 1; c <= k; c++) {
-            int[][] newd = new int[n][n];  // 用于存储新一轮计算的最短路径
+            int[][] newd = new int[n][n];  
 
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n; j++) {
-                    int bestHauntedGalaxy = 10000000;  // 初始化为一个大值
+                    int bestHauntedGalaxy = 10000000;  
                     for (int g = 0; g < n; g++) {
                         if (haunted[g] == 1) {
                             bestHauntedGalaxy = Math.min(bestHauntedGalaxy, d[i][g] + d[g][j]);
                         }
                     }
-                    newd[i][j] = Math.min(d[i][j], bestHauntedGalaxy);  // 更新最短路径
+                    newd[i][j] = Math.min(d[i][j], bestHauntedGalaxy);  
                 }
             }
 
-            d = newd;  // 用新的路径覆盖旧的路径
+            d = newd;  
         }
 
-        return d;  // 返回最终结果
+        return d;  
 	}
-	
 	
 	public static void main(String[] args) {
 		//using 100000 as a stand in for infinity  
